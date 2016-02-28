@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset=utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Foreman - Responsive Web Design</title>
+	<link href="advwebproj1.css" rel="stylesheet">
+<style>
+
+</style>
+<script src="../_js/jquery-1.7.2.min.js"></script>
+<script>
+
+jQuery(document).ready(function($){
+
+	
+	
+	/* toggle nav */
+	$("#menu-icon").onclick function(){
+		$(".navSide").slideToggle();
+		$(this).toggleClass("active");
+	});
+
+});
+</script>
+</head>
+<body>
+<div class="mainContent">
+	<header class="bannerImg">
+		<img src="images/school-banner.jpg" alt="Taekwondo School" >
+	</header>
+	<nav class="navTop">
+		<a href="index.html" class="leftItems">Home</a>
+		<a href="intro.html" class="leftItems">Introduction</a>
+		<a href="aboutme.html" class="leftItems">About Me</a>
+		<a href="disclaimer.html" class="leftItems">Disclaimer</a>
+		
+	</nav>
+	<div class="sideBar">
+		<div id="menu-icon">&#9776</div>
+		<nav class="navSide">
+		
+			<ul>
+				<li><a href="blackbelt.html">Becoming a Black Belt</a></li>
+				<li><a href="flexandbal.html">Muscular Fitness</a>
+					<ul>
+						<li><a href="flexandbal.html">Flexibility and Balance</a></li>
+						<li><a href="stretch.html">Stretching</a></li>
+						<li><a href="physical.html">Physical Skills</a></li>
+					</ul>
+				</li>
+				<li><a href="endurance.html">Cardio and Endurance</a></li>
+				<li><a href="prevention.html">Injury Prevention and Treatment</a></li>
+				<li><a href="choosing.html">Choosing a School</a></li>
+				<li><a href="weapons.html">Weapon Training</a></li>
+				<li><a href="reading.html">Recommended Reading</a></li>
+				<li><a href="resources.html">Resources</a></li>
+			</ul>
+		</nav>
+		<br class="clearFloat">
+		<figure>
+			<img src="images/black_belts.jpg" alt="New Black Belt Levels">
+			<figcaption>
+				Tristan & I achieving 3rd Dan,<br> Sebastian achieving 2nd Dan
+			</figcaption>
+		</figure>
+		
+	</div>
+	<div id="contentCol">
+		<header class="title">Becoming a Black Belt</header>
+		<main class="pageContent">
+			<p>I am often asked, “ How long does it take to get to Black Belt?” The answer to this is always the same. It depends on many different factors.</p> 
+			<p>First you need to access “why” you are training in martial arts. For most adults engaging in martial arts the goal is to get exercise, increase flexibility, lose weight, for the social comradery or all of these. In this context, when you achieve black belt status, while it is rewarding, it is not the main goal.</p>
+			<p>Other factors will play a role in the time it takes to achieve this belt level.</p>
+				<ul>	 
+					<li>How often can you attend classes - ideally you should train at least twice a week, but sometimes work, family or other factors take precedence.</li>
+					<li>How quickly you learn the techniques – each individual has their own pace.</li>
+					<li>Getting sidelined by injuries – it happens, be sure to take the time to recover fully before returning to class to prevent re-injury.</li>
+					<li>Changing schools – at times this may happen, in my experience, when I moved it took several years and schools before I found the right one for me. Each time I had to re-demonstrate my skills and learn each school’s unique style before I could advance.</li> 
+				</ul>
+
+		</main>	
+	</div>
+	<br class="clearFloat">
+	
+</div>
+<footer>
+	<div class="rtCol">Copyright &copy; 2014 Kathleen Foreman</div>
+	<div class="ctrCol">Contact:<a href="mailto:martialartsx3@gmail.com">martialartsx3@gmail.com</a></div>
+	<div class="lftCol">
+		<a href="aboutme.html"><img src="images/button_prev.gif" class="btnImage" alt="Previous">
+		<a href="flexandbal.html"><img src="images/button_next.gif" class="btnImage" alt="Next">
+	</div>
+</footer>
+</body>
+</html>
