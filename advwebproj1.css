@@ -3,11 +3,17 @@ html {margin:0;
 	background-color: #5A3832;
 	height: 100%;}
 body {margin:0; 
-	padding:0; 
+	padding:0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;	
 	display:flex; 
+	-webkit-flex-direction: column;
 	flex-direction: column; 
 	min-height: 100%;} 
-.mainContent { flex: 1;
+.mainContent { 
+/* 	-ms-flex-order: 1;           
+	flex: 1; */
 	 background-image: url(images/BG_Main_lrg.jpg);
 	 background-size: cover;
 	 background-repeat: no-repeat;
@@ -18,23 +24,37 @@ img {
 	max-width: 100%;
 	height: auto;
 }
+/*define the size of the site entry page*/
 #frontPage {max-width: 960px;
 		  height: 350px;
 		  background-size: contain;
 		  background-repeat: no-repeat;
 		  margin:20px auto;
-		 
+		 align-self: center;
 }
+/*place the site name and link to the intro page in the bottom right corner*/
 #frontLogo {position: absolute;
 			bottom: 10%;
 			right: 30%;
 			color: white;
 			font-size: 150%;
 }
+/*image on the site entry page*/
+#front {
+	border: black double 4px; 
+	display: inline-block;
+	max-width: 960px;
+	max-height: 1200px;			
+	margin:20px auto;
+	position: relative;
+}
+
 #mainLogo {position: absolute;
 			top: 11%;
 			left: 30%;
 }
+
+/*place the caption on the front page in the upper left corner of the image */
 .corner {text-align: center;
 	position: absolute;
 	top: 10%;
@@ -44,30 +64,25 @@ img {
 	color: white;
 	font-size: 150%;
 }
+/*site logo at the top of desktop page*/
 .bannerImg { max-width: 1400px;
 		background-size: cover;
 		background-repeat: no-repeat;
 		margin:0 auto;
 		background-position: center;
 }
+/*prev and next navigation buttons*/
 .btnImage { width: 100px;
 		height: 50px;
 }
 
-#front {
-	border: black double 4px; 
-	display: inline-block;
-	max-width: 960px;
-	max-height: 1200px;			
-	margin:20px auto;
-	position: relative;
-}
 .pageContent {width: 90%;
 		background-color: #FFFF99;
-		border-style: 6px solid #542F2D;
+		border: 6px solid #542F2D;
 		border-width: 4px;
 		box-shadow: 5px 5px 5px 5px #777777;
 		padding: 30px;}
+
 figure {display: block;
 	background-color: #5A3832;
 	max-width: 60%;
@@ -97,34 +112,38 @@ figcaption {text-align: center;
 	transition: opacity .75s ease-out;}
 
 figure[class*="stretch"]:hover figcaption[class*="stretch"]{opacity: 1;}
+
 .choosingImg {border: black solid 4px; 
 	display: inline-block;
 	float:left;
-	max-width: 300px;
-	max-height: 400px;			
+	max-width: 40%;
+	max-height: 40%;			
 	margin:20px;
 	position: relative;
 }
+/*positioning of the animited gif*/
 #kicker {margin: 50px 200px;}
+
 #endurance {display: inline-block;
 			float: left;
 			margin: 30px;}
 			
-video{
+video{width: 50%;
+	height: auto;
 	border: 6px solid #4B3B19;
-	margin-left: 50px;
+/* 	margin-left: 50px; */
 	box-shadow: 4px 4px 6px rgba(0,0,0,.5);
 }​		
 video[poster]{
 	height:100%;
 	width:100%;
 }
-.videoContain {width: 352px;
+.videoContain {
 	display: inline-block;
-	margin-left: 50px;
+	/* margin-left: 50px; */
 	}
 .videoContain .videoCaption {
-	margin-left: 100px; 
+	/* margin-left: 100px;  */
 	text-align: center;
 	font-size: 125%;
 }
@@ -135,7 +154,9 @@ video[poster]{
 .navTop {background-color: green;
 	font-size: 1em;
 	min-height: 2.75rem;
+	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-align: center;
 	align-items: center;
 	padding: 0 2rem;
 }
@@ -144,17 +165,30 @@ video[poster]{
 	{ text-decoration: none;}
 .leftItems {margin-right: 5rem;}
 .rightItems {margin-left: auto;}
-main a[href$=".com"]:link {color: #820b0b; background-color:transparent; text-decoration:none;}
-main a[href$=".com"]:visited {color: #f2750e; background-color:transparent; text-decoration:none;}
-main a[href$=".com"]:hover {color: #46b73e; background-color:transparent; text-decoration:none;}
-main a[href$=".com"]:active {color: #6e1d84; background-color:transparent; text-decoration:none;}		
-.navSide { float: left;
-	width: 90%;
-	background-color: #5A3832;
+
+.sideBar { float: left;
+	width: 20%;
+	background-color: transparent;
 	padding-left: 2px;
-	border: 4px double ivory;
-	margin: 15px;
+	border-right: 2px solid black;
+	margin: 10px;
+	text-overflow: ellipsis;
 	}
+
+.navSide { float: left;
+	width: 80%;
+	background-color: #5A3832;
+	border: 4px double ivory;
+	margin: 10px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	}
+	
+.navSide ul li {margin-right: -10px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+	
 nav ol  { list-style-type: none;}
 nav ul  { list-style-type: none;}
 nav a { text-decoration: none;
@@ -166,11 +200,36 @@ a:link    {color: #C6B345; background-color:transparent; text-decoration:none;}
 a:visited {color:yellow; background-color:transparent; text-decoration:none;}
 a:hover   {color:red; background-color:transparent; text-decoration:none;}
 a:active  {color:orange; background-color:transparent; text-decoration:none;}
+
+
+main a[href$=".com"]:link {color: #820b0b; background-color:transparent; text-decoration:none;}
+main a[href$=".com"]:visited {color: #f2750e; background-color:transparent; text-decoration:none;}
+main a[href$=".com"]:hover {color: #46b73e; background-color:transparent; text-decoration:none;}
+main a[href$=".com"]:active {color: #6e1d84; background-color:transparent; text-decoration:none;}		
+
+#contentCol {float: left;
+		width: 65%;
+		background-color: transparent;
+		padding-left: 40px;
+}
+
+.title {background-image: url(images/bamboo_frame.gif);
+		background-repeat: no-repeat;
+		background-position: center;
+		text-align: center;
+		font-size: 150%;
+		margin-bottom: 10px;
+}
+
+/* p::first-line {
+	text-indent: 20px;
+} */
+
 /* menu icon */
 #menu-icon {
 	display: none; /* hide menu icon initially */
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 
 	/* nav-wrap */
 	.navSide {
@@ -180,18 +239,19 @@ a:active  {color:orange; background-color:transparent; text-decoration:none;}
 	/* menu icon */
 	#menu-icon {
 		color: #000;
-		width: 42px;
+		text-align: center;
+		width: 30px;
 		height: 30px;
-		background: #ecebeb 10px center;
-		padding: 8px 10px 0 42px;
+		background: #78d380 10px center;
+		padding: 8px 8px 0 8px;
 		cursor: pointer;
 		border: solid 1px #666;
 		display: block; /* show menu icon */
 	}
 	#menu-icon:hover {
-		background-color: #f8f8f8;
+		background-color: #eae8a1;
 	}
-	#menu-icon.active {
+	#menu-icon:active {
 		background-color: #bbb;
 	}
 	
@@ -199,18 +259,18 @@ a:active  {color:orange; background-color:transparent; text-decoration:none;}
 	.navSide {
 		clear: both;
 		position: absolute;
-		top: 38px;
+		top: 12%;
+		left: 10%;
 		width: 160px;
 		z-index: 10000;
-		padding: 5px;
-		background: #f8f8f8;
+		background: #eae8a1;
 		border: solid 1px #999;
 		display: none; /* visibility will be toggled with jquery */
 	}
 	.navSide li {
 		clear: both;
 		float: none;
-		margin: 5px 0 5px 10px;
+		margin: 3px 0 3px -5px;
 	}
 	.navSide a, 
 	.navSide ul a {
@@ -221,7 +281,7 @@ a:active  {color:orange; background-color:transparent; text-decoration:none;}
 		color: #666;
 		border: none;
 	}
-	.navside a:hover, 
+	.navSide a:hover, 
 	.navSide ul a:hover {
 		background: none;
 		color: #000;
@@ -232,40 +292,37 @@ a:active  {color:orange; background-color:transparent; text-decoration:none;}
 		width: auto;
 		position: static;
 		display: block;
-		border: none;
 		background: inherit;
 	}
 	.navSide ul li {
-		margin: 3px 0 3px 15px;
+		margin: 3px 0 5px -10px;
+		border-bottom: 1px solid green;
 	}
+	.sideBar {border:none; width: 80%;}
+	.sideBar #contentCol {clear:both;}
 
+	.btnImage { width: 60px;
+		height: 30px;
+	}
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
 
 	/* ensure #nav is visible on desktop version */
 	.navSide {
 		display: block !important;
 	}
 
+
 }
-#contentCol {float: left;
-		width: 65%;
-		background-color: transparent;
-		padding-left: 40px;
-}
-.title {background-image: url(images/bamboo_frame.gif);
-		background-repeat: no-repeat;
-		background-position: center;
-		text-align: center;
-		font-size: 150%;
-		margin-bottom: 10px;
-}
-p::first-line {
-	text-indent: 20px;
-}
+
+
 .clearFloat {clear: both;}
-footer {background-color: #5A3832;
+
+footer {
+/* 		-ms-flex-order: 2;           
+		flex: 2; */
+		background-color: #5A3832;
 		float: clear;
 		font-size: small;
 		color: #C6B345;
@@ -283,10 +340,5 @@ footer {background-color: #5A3832;
 	float: right;
 	margin-left: 20px;
 }
-.sideBar { float: left;
-	width: 20%;
-	background-color: transparent;
-	padding-left: 2px;
-	border-right: 2px solid black;
-	margin: 10px;
-	}
+
+

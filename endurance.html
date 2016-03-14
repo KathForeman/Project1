@@ -5,9 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Foreman - Responsive Web Design</title>
 	<link href="advwebproj1.css" rel="stylesheet">
-<style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>
+$(document).ready(
+	function() {
+		/* toggle navSideBar on hover */
+	$('#menu-icon').toggle(
+		function() {
+			$('.navSide').fadeIn(600);
+		}, //show on submenu click
+		
+		function() {
+			$('.navSide').fadeOut(600);
+	}); // end toggle
+}); //end ready
 
-</style>
+</script>
 </head>
 <body>
 <div class="mainContent">
@@ -18,10 +31,11 @@
 		<a href="index.html" class="leftItems">Home</a>
 		<a href="intro.html" class="leftItems">Introduction</a>
 		<a href="aboutme.html" class="leftItems">About Me</a>
-		<a href="disclaimer.html" class="leftItems">Disclaimer</a>
+		<a href="disclaimer.html" class="rightItems">Disclaimer</a>
 		
 	</nav>
 	<div class="sideBar">
+		<div id="menu-icon"> &#9776 </div>
 		<nav class="navSide">
 			<ul>
 				<li><a href="blackbelt.html">Becoming a Black Belt</a></li>
@@ -51,7 +65,7 @@
 	</div>
 	<div id="contentCol">
 		<header class="title">Cardio and Endurance</header>
-		<main class="pageContent">
+		<div class="pageContent">
 			
 			<h3>Cardio and Endurance</h3>
 				<p>We can improve our cardiovascular health by raising our heart rate for 25 minutes. In martial arts this is achieved in many ways. Most activities in a martial arts class will bring your heart rate up. The physical movement throughout the class in itself is beneficial. Ladder drills, running/jogging, kicking drills, and even performing forms with power and snap raise your heart rate. Some classes include sparring for those that wish to engage in it. This is a great way to build cardio-vascular endurance. The sparring rounds typically last 1-3 minutes, but include the use of your major muscles for kicking and moving. Since it isn’t for everyone, there are many other ways to build your endurance with martial arts. One way is speed kicking, such as kicking a target 100 times, as fast as you can. Endurance can be categorized by four types, and are incorporated into a martial arts class. </p>
@@ -71,7 +85,7 @@
 					<li>Focused concentration</li>
 					<li>Examples: Forms or patterns, quick thinking during sparring</li>
 				</ul>
-		</main>	
+		</div>	
 		<br class="clearFloat">
 		<div>
 

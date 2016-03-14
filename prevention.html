@@ -5,9 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Foreman - Responsive Web Design</title>
 	<link href="advwebproj1.css" rel="stylesheet">
-<style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>
+$(document).ready(
+	function() {
+		/* toggle navSideBar on hover */
+	$('#menu-icon').toggle(
+		function() {
+			$('.navSide').fadeIn(600);
+		}, //show on submenu click
+		
+		function() {
+			$('.navSide').fadeOut(600);
+	}); // end toggle
+}); //end ready
 
-</style>
+</script>
 </head>
 <body>
 <div class="mainContent">
@@ -18,10 +31,11 @@
 		<a href="index.html" class="leftItems">Home</a>
 		<a href="intro.html" class="leftItems">Introduction</a>
 		<a href="aboutme.html" class="leftItems">About Me</a>
-		<a href="disclaimer.html" class="leftItems">Disclaimer</a>
+		<a href="disclaimer.html" class="rightItems">Disclaimer</a>
 		
 	</nav>
 	<div class="sideBar">
+		<div id="menu-icon"> &#9776 </div>
 		<nav class="navSide">
 			<ul>
 				<li><a href="blackbelt.html">Becoming a Black Belt</a></li>
@@ -46,7 +60,7 @@
 	</div>
 	<div id="contentCol">
 		<header class="title">A note on Injuries</header>
-		<main class="pageContent">
+		<div class="pageContent">
 			
 			<h3>Injury Prevention and Treatment:</h3>
 				<h4>Injury prevention:</h4>
@@ -55,7 +69,7 @@
 				<h4>If you get injured:</h4>
 			<p>Most injuries in martial arts involve bruises, sprains, or a pulled muscle. It is important to note that as we age, it takes longer for our bodies to recover. For minor bruises and achy muscles, the RICE (Rest, Ice, compression & Elevation) method works well. It helps to relieve pain and swelling and promote healing and flexibility.<br>
 			For more serious injuries, consult your doctor, and take a break and let yourself heal before returning. If you rush back you risk aggravating the injury, resulting in more time away.</p> 
-		</main>	
+		</div>	
 		
 	</div>
 	<br class="clearFloat">

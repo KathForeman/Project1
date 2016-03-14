@@ -5,9 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Foreman - Responsive Web Design</title>
 	<link href="advwebproj1.css" rel="stylesheet">
-<style>
-	
-</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>
+$(document).ready(
+	function() {
+		/* toggle navSideBar on hover */
+	$('#menu-icon').toggle(
+		function() {
+			$('.navSide').fadeIn(600);
+		}, //show on submenu click
+		
+		function() {
+			$('.navSide').fadeOut(600);
+	}); // end toggle
+}); //end ready
+
+</script>
 </head>
 <body>
 <div class="mainContent">
@@ -18,10 +31,11 @@
 		<a href="index.html" class="leftItems">Home</a>
 		<a href="intro.html" class="leftItems">Introduction</a>
 		<a href="aboutme.html" class="leftItems">About Me</a>
-		<a href="disclaimer.html" class="leftItems">Disclaimer</a>
+		<a href="disclaimer.html" class="rightItems">Disclaimer</a>
 		
 	</nav>
 	<div class="sideBar">
+		<div id="menu-icon"> &#9776 </div>
 		<nav class="navSide">
 			<ul>
 				<li><a href="blackbelt.html">Becoming a Black Belt</a></li>
@@ -44,11 +58,11 @@
 	</div>
 	<div id="contentCol">
 		<header class="title">Disclaimer</header>
-		<main class="pageContent">
+		<div class="pageContent">
 			<h3>Disclaimer:</h3>
 			<p>As with any sport, check with your physician that you are physically fit to engage in an activity  as rigorous was martial arts.</p>
 			<p>When starting out in martial arts for the first time it is important to remember to take it slow. You may see teenagers kicking and jumping high and be tempted to do the same. It is not a good idea to try to perform at their level. Begin slowly and build up to your desired level of fitness.</p>
-		</main>	
+		</div>	
 	</div>
 	<br class="clearFloat">
 	

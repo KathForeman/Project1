@@ -5,9 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Foreman - Responsive Web Design</title>
 	<link href="advwebproj1.css" rel="stylesheet">
-<style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>
+$(document).ready(
+	function() {
+		/* toggle navSideBar on hover */
+	$('#menu-icon').toggle(
+		function() {
+			$('.navSide').fadeIn(600);
+		}, //show on submenu click
+		
+		function() {
+			$('.navSide').fadeOut(600);
+	}); // end toggle
+}); //end ready
 
-</style>
+</script>
 </head>
 <body>
 <div class="mainContent">
@@ -18,10 +31,11 @@
 		<a href="index.html" class="leftItems">Home</a>
 		<a href="intro.html" class="leftItems">Introduction</a>
 		<a href="aboutme.html" class="leftItems">About Me</a>
-		<a href="disclaimer.html" class="leftItems">Disclaimer</a>
+		<a href="disclaimer.html" class="rightItems">Disclaimer</a>
 		
 	</nav>
 	<div class="sideBar">
+		<div id="menu-icon"> &#9776 </div>
 		<nav class="navSide">
 			<ul>
 				<li><a href="blackbelt.html">Becoming a Black Belt</a></li>
@@ -51,7 +65,7 @@
 	</div>
 	<div id="contentCol">
 		<header class="title">Weapons</header>
-		<main class="pageContent">
+		<div class="pageContent">
 			
 			<h3>Weapon Training:</h3>
 				
@@ -65,7 +79,7 @@
 				<li>Cane – self-defense, forms (good to know when we reach the stage when we will need one)</li>
 			</ul>
 
-		</main>	
+		</div>	
 		<br class="clearFloat">
 		<div>
 		<figure class="choosingImg">
@@ -75,7 +89,7 @@
 			</figcaption>
 		</figure>
 		<figure class="choosingImg">
-			<img src="images/jang_bang_duo_med.jpg" alt="Comradery with others">
+			<img src="images/jang_bang_duo_med.jpg" alt="Mother and son duo">
 			<figcaption>
 				Jang Bang Training
 			</figcaption>
@@ -83,7 +97,9 @@
 		
 		</div>
 		<div class="videoContain">
-			 <video controls="controls" preload="auto" poster="images/jang_bang.jpg" width="352" height="288">
+			 <video controls="controls" preload="auto" poster="images/jang_bang.jpg" >
+			 <source src="video/jang_bang_form.webm" type="video/webm">
+			 <source src="video/jang_bang_form.ogv" type="video/ogg">
 			 <source src="video/jang_bang_form.mp4" type="video/mp4">
 			 </video>
 			 <div class="videoCaption">Jang-Bang Form</div>

@@ -5,9 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Foreman - Responsive Web Design</title>
 	<link href="advwebproj1.css" rel="stylesheet">
-<style>
-	
-</style>
+<script>
+$(document).ready(
+	function() {
+		/* toggle navSideBar on hover */
+	$('#menu-icon').toggle(
+		function() {
+			$('.navSide').fadeIn(600);
+		}, //show on submenu click
+		
+		function() {
+			$('.navSide').fadeOut(600);
+	}); // end toggle
+}); //end ready
+
+</script>
 </head>
 <body>
 <div class="mainContent">
@@ -18,10 +30,11 @@
 		<a href="index.html" class="leftItems">Home</a>
 		<a href="intro.html" class="leftItems">Introduction</a>
 		<a href="aboutme.html" class="leftItems">About Me</a>
-		<a href="disclaimer.html" class="leftItems">Disclaimer</a>
+		<a href="disclaimer.html" class="rightItems">Disclaimer</a>
 		
 	</nav>
 	<div class="sideBar">
+		<div id="menu-icon"> &#9776 </div>
 		<nav class="navSide">
 			<ul>
 				<li><a href="blackbelt.html">Becoming a Black Belt</a></li>
@@ -51,13 +64,13 @@
 	</div>
 	<div id="contentCol">
 		<header class="title">Introduction</header>
-		<main class="pageContent">
+		<div class="pageContent">
 			<p>With the inclusion of Taekwondo sparring in the summer Olympics, martial arts has grown in popularity. For most, the perception is that it is a sport for youth. This is far from reality. Martial arts is much more than the sparring that popularized the sport and it is an activity that can be enjoyed by persons of all ages.</p> 
 			<p>Martial arts is a great form of exercise. It encompasses flexibility, balance, cardio, endurance, physical skills, mental capacity and stress reduction. As we age, these attributes are very important in maintaining our health. So, too, it is important that we understand that our bodies cannot perform to the same level as the younger students in the class. Staying within the limits of our bodies allow for the participation in martial arts without the risk of injury.</p> 	
 			<p>Many adults are now pursuing martial arts as a form of exercise. Adult classes are tailored to the needs of this group dynamic. The stretching focuses on improving the flexibility needed. The physical skills are designed to challenge the individual without exceeding the physical limits. Endurance and cardio is achieved through drills and forms. Martial arts is a good way to reduce stress. Through the physical exercise and yelling we release the tension of the day.</p>
 			<p>It is more than just sparring. Join a class and experience all the martial arts has to offer.</p>
 			<p>Use the links to explore all that martial arts has to offer.</p>
-		</main>	
+		</div>	
 	</div>
 	<br class="clearFloat">
 	

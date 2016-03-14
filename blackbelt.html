@@ -5,23 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Foreman - Responsive Web Design</title>
 	<link href="advwebproj1.css" rel="stylesheet">
-<style>
-
-</style>
-<script src="../_js/jquery-1.7.2.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script>
+$(document).ready(
+	function() {
+		/* toggle navSideBar on hover */
+	$('#menu-icon').toggle(
+		function() {
+			$('.navSide').fadeIn(600);
+		}, //show on submenu click
+		
+		function() {
+			$('.navSide').fadeOut(600);
+	}); // end toggle
+}); //end ready
 
-jQuery(document).ready(function($){
-
-	
-	
-	/* toggle nav */
-	$("#menu-icon").onclick function(){
-		$(".navSide").slideToggle();
-		$(this).toggleClass("active");
-	});
-
-});
 </script>
 </head>
 <body>
@@ -33,11 +31,11 @@ jQuery(document).ready(function($){
 		<a href="index.html" class="leftItems">Home</a>
 		<a href="intro.html" class="leftItems">Introduction</a>
 		<a href="aboutme.html" class="leftItems">About Me</a>
-		<a href="disclaimer.html" class="leftItems">Disclaimer</a>
+		<a href="disclaimer.html" class="rightItems">Disclaimer</a>
 		
 	</nav>
 	<div class="sideBar">
-		<div id="menu-icon">&#9776</div>
+		<div id="menu-icon"> &#9776 </div>
 		<nav class="navSide">
 		
 			<ul>
@@ -68,7 +66,7 @@ jQuery(document).ready(function($){
 	</div>
 	<div id="contentCol">
 		<header class="title">Becoming a Black Belt</header>
-		<main class="pageContent">
+		<div class="pageContent">
 			<p>I am often asked, “ How long does it take to get to Black Belt?” The answer to this is always the same. It depends on many different factors.</p> 
 			<p>First you need to access “why” you are training in martial arts. For most adults engaging in martial arts the goal is to get exercise, increase flexibility, lose weight, for the social comradery or all of these. In this context, when you achieve black belt status, while it is rewarding, it is not the main goal.</p>
 			<p>Other factors will play a role in the time it takes to achieve this belt level.</p>
@@ -79,7 +77,7 @@ jQuery(document).ready(function($){
 					<li>Changing schools – at times this may happen, in my experience, when I moved it took several years and schools before I found the right one for me. Each time I had to re-demonstrate my skills and learn each school’s unique style before I could advance.</li> 
 				</ul>
 
-		</main>	
+		</div>	
 	</div>
 	<br class="clearFloat">
 	

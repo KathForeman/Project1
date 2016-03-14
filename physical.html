@@ -5,9 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Foreman - Responsive Web Design</title>
 	<link href="advwebproj1.css" rel="stylesheet">
-<style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>
+$(document).ready(
+	function() {
+		/* toggle navSideBar on hover */
+	$('#menu-icon').toggle(
+		function() {
+			$('.navSide').fadeIn(600);
+		}, //show on submenu click
+		
+		function() {
+			$('.navSide').fadeOut(600);
+	}); // end toggle
+}); //end ready
 
-</style>
+</script>
 </head>
 <body>
 <div class="mainContent">
@@ -18,10 +31,11 @@
 		<a href="index.html" class="leftItems">Home</a>
 		<a href="intro.html" class="leftItems">Introduction</a>
 		<a href="aboutme.html" class="leftItems">About Me</a>
-		<a href="disclaimer.html" class="leftItems">Disclaimer</a>
+		<a href="disclaimer.html" class="rightItems">Disclaimer</a>
 		
 	</nav>
 	<div class="sideBar">
+		<div id="menu-icon"> &#9776 </div>
 		<nav class="navSide">
 			<ul>
 				<li><a href="blackbelt.html">Becoming a Black Belt</a></li>
@@ -51,12 +65,12 @@
 	</div>
 	<div id="contentCol">
 		<header class="title">Physical Skills</header>
-		<main class="pageContent">
+		<div class="pageContent">
 			
 			<h3>Physical Skills: drills, kicks</h3>
 				<p>It goes without saying that martial arts is a physical sport. There is reason that martial arts incorporates a belt system. Beginner belts learn basic skills and the focus is on technique. As you progress, the skills become more complex and use a greater range of motion. Using your full range of motion during kicks and punches increases not only muscle strength but flexibility as well. Drills in kicking and punching improve. The main focus should be on technique rather than height. Using proper technique will prevent injury, by eliminating incorrect use of muscles and joints. Proper techniques are gained through repetition and body memory. If you focus on performing kicks, punches and forms correctly each time, your body remembers the movement and results in accurate skills. Drills are designed to focus on this aspect and target specific goals within martial arts. Some of the aspects of martial arts targeted are agility, reaction times, coordination, speed, and endurance.</p>
 				<p>After a vigorous session, you may feel some muscle soreness. Take a break, and allow your muscles to recover, then return and continue. With time your stamina, strength and endurance will improve.</p>
-		</main>	
+		</div>	
 		<div>
 
 			<img id="kicker" src="images/1karatekatagif.gif" alt="Animated Taekwondo Kicker">

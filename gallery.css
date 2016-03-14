@@ -1,0 +1,37 @@
+#contentCol {float: left;
+		width: 50%;
+		background-color: transparent;
+		padding-left: 40px;
+}
+#main {border: brown solid 2px; 
+	width: 65%; 
+	margin: 10px 20px 10px 20px;
+	padding: 20px 30px 10px 20px ;
+}
+#rtSide {
+	width: 20%;
+	float:right; 
+	margin: 40px 10px; 
+	padding:10px 5px;
+}
+#controls {background: transparent;
+	margin-top: 10px;
+	background-position: center;
+	border-radius: 15px;
+	padding-left: 20px;
+}
+img.viewer {padding: 5px 20px 5px 10px;}
+button {
+	margin: 0 10px 0 10px;
+}
+button.left {position: absolute;
+		top: 60%;
+		left: 25%;
+		background: none;
+		border: none;}
+button.right {position: absolute;
+		top: 60%;
+		left: 80%;
+		background: none;
+		border: none;}
+

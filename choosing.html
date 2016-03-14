@@ -5,9 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Foreman - Responsive Web Design</title>
 	<link href="advwebproj1.css" rel="stylesheet">
-<style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>
+$(document).ready(
+	function() {
+		/* toggle navSideBar on hover */
+	$('#menu-icon').toggle(
+		function() {
+			$('.navSide').fadeIn(600);
+		}, //show on submenu click
+		
+		function() {
+			$('.navSide').fadeOut(600);
+	}); // end toggle
+}); //end ready
 
-</style>
+</script>
 </head>
 <body>
 <div class="mainContent">
@@ -18,10 +31,11 @@
 		<a href="index.html" class="leftItems">Home</a>
 		<a href="intro.html" class="leftItems">Introduction</a>
 		<a href="aboutme.html" class="leftItems">About Me</a>
-		<a href="disclaimer.html" class="leftItems">Disclaimer</a>
+		<a href="disclaimer.html" class="rightItems">Disclaimer</a>
 		
 	</nav>
 	<div class="sideBar">
+		<div id="menu-icon"> &#9776 </div>
 		<nav class="navSide">
 			<ul>
 				<li><a href="blackbelt.html">Becoming a Black Belt</a></li>
@@ -51,7 +65,7 @@
 	</div>
 	<div id="contentCol">
 		<header class="title">Choosing a School</header>
-		<main class="pageContent">
+		<div class="pageContent">
 			
 			<h3>Choosing a martial art and school:</h3>
 				
@@ -69,7 +83,7 @@
 				<li>Trial a school, most schools offer a trial period before you commit. This is important. If you are not satisfied with the training, change schools. (I have trained under five grand masters. Not all schools are the same.)</li>
 				<li>Speak with the master about your goals, limitations and responsibilities outside of training. They will be able to help in meeting your needs.</li>
 			</ol>
-		</main>	
+		</div>	
 		<br class="clearFloat">
 		<div>
 		<figure class="choosingImg">
@@ -93,8 +107,8 @@
 	<div class="rtCol">Copyright &copy; 2014 Kathleen Foreman</div>
 	<div class="ctrCol">Contact:<a href="mailto:martialartsx3@gmail.com">martialartsx3@gmail.com</a></div>
 	<div class="lftCol">
-		<a href="prevention.html"><img src="images/button_prev.gif" class="btnImage" alt="Previous">
-		<a href="weapons.html"><img src="images/button_next.gif" class="btnImage" alt="Next">
+		<a href="prevention.html"><img src="images/button_prev.gif" class="btnImage" alt="Previous"></a>
+		<a href="weapons.html"><img src="images/button_next.gif" class="btnImage" alt="Next"></a>
 	</div>
 </footer>
 </body>

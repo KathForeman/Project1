@@ -5,9 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Foreman - Responsive Web Design</title>
 	<link href="advwebproj1.css" rel="stylesheet">
-<style>
+<script>
+$(document).ready(
+	function() {
+		/* toggle navSideBar on hover */
+	$('#menu-icon').toggle(
+		function() {
+			$('.navSide').fadeIn(600);
+		}, //show on submenu click
+		
+		function() {
+			$('.navSide').fadeOut(600);
+	}); // end toggle
+}); //end ready
 
-</style>
+</script>
 </head>
 <body>
 <div class="mainContent">
@@ -18,10 +30,11 @@
 		<a href="index.html" class="leftItems">Home</a>
 		<a href="intro.html" class="leftItems">Introduction</a>
 		<a href="aboutme.html" class="leftItems">About Me</a>
-		<a href="disclaimer.html" class="leftItems">Disclaimer</a>
+		<a href="disclaimer.html" class="rightItems">Disclaimer</a>
 		
 	</nav>
 	<div class="sideBar">
+	<div id="menu-icon"> &#9776 </div>
 		<nav class="navSide">
 			<ul>
 				<li><a href="blackbelt.html">Becoming a Black Belt</a></li>
@@ -51,12 +64,12 @@
 	</div>
 	<div id="contentCol">
 		<header class="title">Flexibility and Balance</header>
-		<main class="pageContent">
+		<div class="pageContent">
 			
 			<h3>Flexibility and Balance:</h3>
 				<p>Before stretching it is important to warm up your muscles through jogging, jumping jacks, jump rope, or a game of dodgeball or soccer. Warmed muscles are more resilient and pliable. Stretching is most important when participating in martial arts. As part of the aging process, our muscles and tendons become more rigid and it is accelerated by inactivity. The good news is that you can regain your flexibility through participation in a martial arts class. For adults the flexibility focus should be on the muscles surrounding the joints to prevent injury. Concentrate on hips, thighs, shoulders and back to support the rigors of martial arts. “When you stretch a muscle, the body’s natural reaction is to tighten and try to shorten.” It can take up to 20 seconds for the signals to reach the muscle, telling it relax and lengthen. Holding a stretch for 20 seconds is best to achieve results. You may find that stretching only during class is not enough to achieve the flexibility you desire. Stretching at home in between classes is a good idea.</p>
 				<p>Balance is an important aspect of Taekwondo. Maintaining balance during kicks, especially spinning kicks, is required for control. Drills to strengthen your muscles help with gaining control.</p>
-		</main>	
+		</div>	
 	</div>
 	<br class="clearFloat">
 	
