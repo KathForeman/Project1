@@ -1,28 +1,44 @@
 #contentCol {float: left;
-		width: 50%;
+		width: 70%;
 		background-color: transparent;
 		padding-left: 40px;
 }
+.pageContent {width: 65%;
+		float: left;
+		background-color: #FFFF99;
+		border: 6px solid #542F2D;
+		border-width: 4px;
+		box-shadow: 5px 5px 5px 5px #777777;
+		padding: 30px;}
+
 #main {border: brown solid 2px; 
 	width: 65%; 
 	margin: 10px 20px 10px 20px;
 	padding: 20px 30px 10px 20px ;
 }
 #rtSide {
-	width: 20%;
+	width: 25%;
 	float:right; 
-	margin: 40px 10px; 
+	margin: 0px 10px; 
 	padding:10px 5px;
 }
 #controls {background: transparent;
 	margin-top: 10px;
 	background-position: center;
 	border-radius: 15px;
-	padding-left: 20px;
+	padding-left: 10%;
 }
 img.viewer {padding: 5px 20px 5px 10px;}
-button {
-	margin: 0 10px 0 10px;
+img#rtSide {width: 75%;}
+button {padding: 0;
+	margin: 0;
+	background: transparent;
+	border: none;
+}
+@media screen and (max-width: 1024px) {
+#main {width: 80%;}
+#rtSide {width: 95%;}
+button img{width: 50%;}
 }
 button.left {position: absolute;
 		top: 60%;

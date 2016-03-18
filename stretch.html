@@ -4,23 +4,10 @@
 	<meta charset=utf-8>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Foreman - Responsive Web Design</title>
-	<link href="advwebproj1.css" rel="stylesheet">
+	<link href="css/advwebproj1.css" rel="stylesheet">
+	<link href="css/stretching.css" rel="stylesheet">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script>
-$(document).ready(
-	function() {
-		/* toggle navSideBar on hover */
-	$('#menu-icon').toggle(
-		function() {
-			$('.navSide').fadeIn(600);
-		}, //show on submenu click
-		
-		function() {
-			$('.navSide').fadeOut(600);
-	}); // end toggle
-}); //end ready
-
-</script>
+<script src="scripts/menuIcon.js"></script>
 </head>
 <body>
 <div class="mainContent">

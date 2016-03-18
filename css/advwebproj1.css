@@ -14,7 +14,7 @@ body {margin:0;
 .mainContent { 
 /* 	-ms-flex-order: 1;           
 	flex: 1; */
-	 background-image: url(images/BG_Main_lrg.jpg);
+	 background-image: url(../images/BG_Main_lrg.jpg);
 	 background-size: cover;
 	 background-repeat: no-repeat;
 	 padding-bottom: 20px;
@@ -94,24 +94,6 @@ figcaption {text-align: center;
 	font-family: Papyrus, fantasy;
 	
 }
-.stretchImg {border: black solid 4px; 
-	display: inline-block;
-	float:left;
-	max-width: 300px;
-	max-height: 400px;			
-	margin:20px;
-	position: relative;
-}
-.stretchCap {position: absolute;
-	bottom: 10%;
-	left: 10%;
-	border: black solid 3px;
-	background-color: rgba(159,166,162,.85);
-	color: white;
-	opacity: 0;
-	transition: opacity .75s ease-out;}
-
-figure[class*="stretch"]:hover figcaption[class*="stretch"]{opacity: 1;}
 
 .choosingImg {border: black solid 4px; 
 	display: inline-block;
@@ -202,10 +184,12 @@ a:hover   {color:red; background-color:transparent; text-decoration:none;}
 a:active  {color:orange; background-color:transparent; text-decoration:none;}
 
 
-main a[href$=".com"]:link {color: #820b0b; background-color:transparent; text-decoration:none;}
-main a[href$=".com"]:visited {color: #f2750e; background-color:transparent; text-decoration:none;}
-main a[href$=".com"]:hover {color: #46b73e; background-color:transparent; text-decoration:none;}
-main a[href$=".com"]:active {color: #6e1d84; background-color:transparent; text-decoration:none;}		
+a[href$=".com"]:link {color: #820b0b; background-color:transparent; text-decoration:none;}
+a[href$=".com"]:visited {color: #f2750e; background-color:transparent; text-decoration:none;}
+a[href$=".com"]:hover {color: #46b73e; background-color:transparent; text-decoration:none;}
+a[href$=".com"]:active {color: #6e1d84; background-color:transparent; text-decoration:none;}	
+a[href*="photogallery"]:link {color: #46b73e; background-color:transparent; text-decoration:none;}
+a[href*="photogallery"]:visited {color: #820b0b; background-color:transparent; text-decoration:none;}	
 
 #contentCol {float: left;
 		width: 65%;
@@ -213,7 +197,7 @@ main a[href$=".com"]:active {color: #6e1d84; background-color:transparent; text-
 		padding-left: 40px;
 }
 
-.title {background-image: url(images/bamboo_frame.gif);
+.title {background-image: url(../images/bamboo_frame.gif);
 		background-repeat: no-repeat;
 		background-position: center;
 		text-align: center;

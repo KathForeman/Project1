@@ -1,0 +1,28 @@
+.stretchImg {border: black solid 4px; 
+	display: inline-block;
+	float:left;
+	max-width: 300px;
+	max-height: 450px;			
+	margin:20px;
+	position: relative;
+}
+
+.stretchCap {position: absolute;
+	bottom: 10%;
+	left: 10%;
+	border: black solid 3px;
+	background-color: rgba(159,166,162,.85);
+	color: white;
+	opacity: 0;
+	transition: opacity .75s ease-out;}
+
+figure[class*="stretch"]:hover figcaption[class*="stretch"]{opacity: 1;}
+
+@media screen and (max-width: 960px) {
+.stretchCap {position: relative;
+	left: 0%;
+	border: black solid 3px;
+	background-color: rgba(159,166,162,.85);
+	color: white;
+	opacity: 1;}
+}
