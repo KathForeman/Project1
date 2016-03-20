@@ -25,8 +25,8 @@ img {
 	height: auto;
 }
 /*define the size of the site entry page*/
-#frontPage {max-width: 960px;
-		  height: 350px;
+#frontPage {max-width: 80%;
+		  height: auto;
 		  background-size: contain;
 		  background-repeat: no-repeat;
 		  margin:20px auto;
@@ -44,7 +44,7 @@ img {
 	border: black double 4px; 
 	display: inline-block;
 	max-width: 960px;
-	max-height: 1200px;			
+	max-height: auto;			
 	margin:20px auto;
 	position: relative;
 }
@@ -190,7 +190,8 @@ a[href$=".com"]:hover {color: #46b73e; background-color:transparent; text-decora
 a[href$=".com"]:active {color: #6e1d84; background-color:transparent; text-decoration:none;}	
 a[href*="photogallery"]:link {color: #46b73e; background-color:transparent; text-decoration:none;}
 a[href*="photogallery"]:visited {color: #820b0b; background-color:transparent; text-decoration:none;}	
-
+a[href*="gmail"]:link {color: #C6B345; background-color:transparent; text-decoration:none;}
+a[href*="gmail"]:visited {color:yellow; background-color:transparent; text-decoration:none;}
 #contentCol {float: left;
 		width: 65%;
 		background-color: transparent;
@@ -318,7 +319,7 @@ footer {
 .ctrCol {width: 45%;
 	float: left;
 	text-align: center;
-	padding-top: 30px;
+	padding-top: 20px;
 }
 .lftCol {width: 20%;
 	float: right;

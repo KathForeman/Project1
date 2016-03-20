@@ -18,7 +18,7 @@
 
 figure[class*="stretch"]:hover figcaption[class*="stretch"]{opacity: 1;}
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1100px) {
 .stretchCap {position: relative;
 	left: 0%;
 	border: black solid 3px;
