@@ -36,7 +36,7 @@ button {padding: 0;
 	border: none;
 }
 @media screen and (max-width: 1024px) {
-#main {width: 80%;}
+#contentCol  {width: 90%;}
 #rtSide {width: 95%;}
 button img{width: 50%;}
 }
